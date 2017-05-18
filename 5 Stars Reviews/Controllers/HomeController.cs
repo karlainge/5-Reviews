@@ -33,5 +33,26 @@ namespace _5_Stars_Reviews.Controllers
 
             return View();
         }
+
+        public ActionResult Directors()
+        {
+            ViewBag.Message = "View you faverioute Directors";
+
+            return View();
+        }
+
+        public ActionResult Genre()
+        {
+            ViewBag.Message = "Look for your faverioute Genre";
+
+            return View();
+        }
+
+        public ActionResult FilmsStoriesandGossip()
+        {
+            ViewBag.Message = "look at the gossip";
+
+            return View();
+        }
     }
 }
