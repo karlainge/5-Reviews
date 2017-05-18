@@ -26,5 +26,12 @@ namespace _5_Stars_Reviews.Controllers
 
             return View();
         }
+
+        public ActionResult Actors ()
+        {
+            ViewBag.Message = "your actors";
+
+            return View();
+        }
     }
 }
