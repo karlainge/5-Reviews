@@ -234,6 +234,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Actors.cshtml" />
+    <Content Include="Views\Home\Directors.cshtml" />
+    <Content Include="Views\Home\Genre.cshtml" />
+    <Content Include="Views\Home\FilmsStoriesandGossip.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
