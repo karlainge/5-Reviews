@@ -244,6 +244,14 @@
     <Content Include="Views\Home\ScienceFiction.cshtml" />
     <Content Include="Views\Home\MartialArts.cshtml" />
     <Content Include="Views\Home\Drama.cshtml" />
+    <Content Include="Views\Home\Tron.cshtml" />
+    <Content Include="Views\Home\Serenity.cshtml" />
+    <Content Include="Views\Home\RogueOneAStarWarsStory.cshtml" />
+    <Content Include="Views\Home\StarWarsANewHope.cshtml" />
+    <Content Include="Views\Home\SpaceOdyssey2001.cshtml" />
+    <Content Include="Views\Home\BladeRunner.cshtml" />
+    <Content Include="Views\Home\AlienCovenant.cshtml" />
+    <Content Include="Views\Home\CloseEncounters.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
