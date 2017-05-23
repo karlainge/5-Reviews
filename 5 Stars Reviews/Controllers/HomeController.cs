@@ -54,5 +54,12 @@ namespace _5_Stars_Reviews.Controllers
 
             return View();
         }
+
+        public ActionResult Films()
+        {
+            ViewBag.Message = "Loook at faverioute Films";
+
+            return View();
+        }
     }
 }
