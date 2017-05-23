@@ -54,5 +54,11 @@ namespace _5_Stars_Reviews.Controllers
 
             return View();
         }
-    }
+
+        public ActionResult Rankings()
+        {
+            ViewBag.Message = "Look at the gossip";
+
+            return View();
+        }
 }
