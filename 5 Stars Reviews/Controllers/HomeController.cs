@@ -91,5 +91,53 @@ namespace _5_Stars_Reviews.Controllers
             ViewBag.Message = "Look at Drama";
             return View();
         }
+
+        public ActionResult Tron()
+        {
+            ViewBag.Message = "Infomation on Tron";
+            return View();
+        }
+
+        public ActionResult StarWarsANewHope()
+        {
+            ViewBag.Message = "Information on Star Wars A New Hope";
+            return View();
+        }
+
+        public ActionResult Serenity()
+        {
+            ViewBag.Message = "Information on Serenity";
+            return View();
+        }
+
+        public ActionResult RogueOneAStarWarsStory()
+        {
+            ViewBag.Message = "Information on Rogue One A Star Wars Story";
+            return View();
+        }
+        
+        public ActionResult SpaceOdyssey2001()
+        {
+            ViewBag.Message = "Information on 2001 Space Odyssey";
+            return View();
+        }
+
+        public ActionResult CloseEncounters()
+        {
+            ViewBag.Message = "Information on Close Encounters";
+            return View();
+        }
+
+        public ActionResult BladeRunner()
+        {
+            ViewBag.Message = "Information on Blade Runner";
+            return View();
+        }
+
+        public ActionResult AlienCovenant()
+        {
+            ViewBag.Message = "Information on Alien Covenant";
+            return View();
+        }
     }
 }
