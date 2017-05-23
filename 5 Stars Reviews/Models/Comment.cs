@@ -5,11 +5,11 @@ using System.Web;
 
 namespace _5_Stars_Reviews.Models
 {
-    public class Actor
+    public class Comment
     {
-        public virtual int ActorId;
+        public virtual int CommentId;
 
-        public virtual string ActorName;
+        public virtual string Comment;
 
     }
 }
