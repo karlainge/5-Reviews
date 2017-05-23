@@ -238,6 +238,7 @@
     <Content Include="Views\Home\Directors.cshtml" />
     <Content Include="Views\Home\Genre.cshtml" />
     <Content Include="Views\Home\FilmsStoriesandGossip.cshtml" />
+    <Content Include="Views\Home\Ratings.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
