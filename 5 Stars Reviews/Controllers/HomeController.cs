@@ -57,7 +57,7 @@ namespace _5_Stars_Reviews.Controllers
 
         public ActionResult Rankings()
         {
-            ViewBag.Message = "Look at the gossip";
+            ViewBag.Message = "Look for current league tables of the films";
 
             return View();
         }
