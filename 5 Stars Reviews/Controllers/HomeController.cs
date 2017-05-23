@@ -29,14 +29,14 @@ namespace _5_Stars_Reviews.Controllers
 
         public ActionResult Actors ()
         {
-            ViewBag.Message = "your actors";
+            ViewBag.Message = "Your actors";
 
             return View();
         }
 
         public ActionResult Directors()
         {
-            ViewBag.Message = "View you faverioute Directors";
+            ViewBag.Message = "View your faverioute Directors";
 
             return View();
         }
@@ -50,7 +50,7 @@ namespace _5_Stars_Reviews.Controllers
 
         public ActionResult FilmsStoriesandGossip()
         {
-            ViewBag.Message = "look at the gossip";
+            ViewBag.Message = "Look at the gossip";
 
             return View();
         }
