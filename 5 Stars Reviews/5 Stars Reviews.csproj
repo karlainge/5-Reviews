@@ -252,6 +252,26 @@
     <Content Include="Views\Home\BladeRunner.cshtml" />
     <Content Include="Views\Home\AlienCovenant.cshtml" />
     <Content Include="Views\Home\CloseEncounters.cshtml" />
+    <Content Include="Views\Home\ISpitOnYourGrave.cshtml" />
+    <Content Include="Views\Home\Sinsiter.cshtml" />
+    <Content Include="Views\Home\Alien.cshtml" />
+    <Content Include="Views\Home\TheOmen.cshtml" />
+    <Content Include="Views\Home\TheInvitation.cshtml" />
+    <Content Include="Views\Home\JohnWickChapter2.cshtml" />
+    <Content Include="Views\Home\Avengers.cshtml" />
+    <Content Include="Views\Home\GuardiansoftheGalaxyVol2.cshtml" />
+    <Content Include="Views\Home\MadMaxFuryRoad.cshtml" />
+    <Content Include="Views\Home\CasinoRoyale2006.cshtml" />
+    <Content Include="Views\Home\FaceOff.cshtml" />
+    <Content Include="Views\Home\IpMan.cshtml" />
+    <Content Include="Views\Home\EntertheDragon.cshtml" />
+    <Content Include="Views\Home\Fearless.cshtml" />
+    <Content Include="Views\Home\KungFuHustle.cshtml" />
+    <Content Include="Views\Home\TheRaid.cshtml" />
+    <Content Include="Views\Home\ForrestGump.cshtml" />
+    <Content Include="Views\Home\TheShawShankRedemption.cshtml" />
+    <Content Include="Views\Home\ManchesterBytheSea.cshtml" />
+    <Content Include="Views\Home\SavingPrivateRyan.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
