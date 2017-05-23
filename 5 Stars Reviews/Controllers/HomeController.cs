@@ -57,8 +57,38 @@ namespace _5_Stars_Reviews.Controllers
 
         public ActionResult Films()
         {
-            ViewBag.Message = "Loook at faverioute Films";
+            ViewBag.Message = "Look at faverioute Films";
 
+            return View();
+        }
+
+        public ActionResult Action()
+        {
+            ViewBag.Message = "Look at Action Films";
+            return View();
+        }
+
+        public ActionResult Horror()
+        {
+            ViewBag.Message = "Look at Horror";
+            return View();
+        }
+
+        public ActionResult Sciencefiction()
+        {
+            ViewBag.Message = "Look at Sci-Fi";
+            return View();
+        }
+
+        public ActionResult MartialArts()
+        {
+            ViewBag.Message = "Look at Martial Arts";
+            return View();
+        }
+
+        public ActionResult Drama()
+        {
+            ViewBag.Message = "Look at Drama";
             return View();
         }
     }
