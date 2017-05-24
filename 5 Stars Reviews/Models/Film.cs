@@ -23,8 +23,5 @@ namespace _5_Stars_Reviews.Models
 
         ICollection<Comment> Comments;
 
-
-
-
     }
 }
