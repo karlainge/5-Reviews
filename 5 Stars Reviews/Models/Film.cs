@@ -27,4 +27,8 @@ namespace _5_Stars_Reviews.Models
 
 
     }
+
+    internal class Review
+    {
+    }
 }
