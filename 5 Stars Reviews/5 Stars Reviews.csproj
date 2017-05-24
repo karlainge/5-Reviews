@@ -276,6 +276,7 @@
     <Content Include="Views\Home\TheShawShankRedemption.cshtml" />
     <Content Include="Views\Home\ManchesterBytheSea.cshtml" />
     <Content Include="Views\Home\SavingPrivateRyan.cshtml" />
+
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
