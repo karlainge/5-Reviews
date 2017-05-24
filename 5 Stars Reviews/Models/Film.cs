@@ -21,5 +21,7 @@ namespace _5_Stars_Reviews.Models
 
         public virtual Director Director { get; set; }
 
+        ICollection<Actor> Actors; 
+
     }
 }
