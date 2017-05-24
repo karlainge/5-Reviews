@@ -19,16 +19,12 @@ namespace _5_Stars_Reviews.Models
 
         ICollection<Actor> Actors;
 
-        ICollection<Reviews> Reviews;
+        ICollection<Review> Reviews;
 
         ICollection<Comment> Comments;
 
 
 
 
-    }
-
-    internal class Reviews
-    {
     }
 }

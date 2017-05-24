@@ -7,9 +7,9 @@ namespace _5_Stars_Reviews.Models
 {
     public class Comment
     {
-        public virtual int CommentId { get; set; }
+        public virtual int CommentId;
 
-        public virtual string Comments { get; set; }
+        public virtual string Comment;
 
     }
 }
