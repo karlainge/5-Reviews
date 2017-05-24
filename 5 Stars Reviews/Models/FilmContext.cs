@@ -20,5 +20,8 @@ namespace _5_Stars_Reviews.Models
         }
 
         public System.Data.Entity.DbSet<_5_Stars_Reviews.Models.Film> Films { get; set; }
+
+
+
     }
 }

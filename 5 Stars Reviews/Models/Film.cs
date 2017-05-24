@@ -16,5 +16,10 @@ namespace _5_Stars_Reviews.Models
         public virtual DateTime ReleaseDate { get; set; }
 
         public virtual string Genre { get; set; }
+
+        public virtual int DirectorId { get; set; }
+
+        public virtual Director Director { get; set; }
+
     }
 }
