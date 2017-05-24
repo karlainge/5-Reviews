@@ -11,7 +11,5 @@ namespace _5_Stars_Reviews.Models
 
         public virtual string DirectorName { get; set; }
 
-        ICollection<Film> Film;
-
     }
 }
