@@ -11,5 +11,7 @@ namespace _5_Stars_Reviews.Models
 
         public virtual string ActorName { get; set; }
 
+        ICollection<Film> Films;
+
     }
 }
