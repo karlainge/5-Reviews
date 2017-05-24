@@ -174,6 +174,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Actor.cs" />
+    <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\Director.cs" />
+    <Compile Include="Models\Film.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -238,7 +242,41 @@
     <Content Include="Views\Home\Directors.cshtml" />
     <Content Include="Views\Home\Genre.cshtml" />
     <Content Include="Views\Home\FilmsStoriesandGossip.cshtml" />
-    <Content Include="Views\Home\Ratings.cshtml" />
+    <Content Include="Views\Home\Films.cshtml" />
+    <Content Include="Views\Home\Action.cshtml" />
+    <Content Include="Views\Home\Horror.cshtml" />
+    <Content Include="Views\Home\ScienceFiction.cshtml" />
+    <Content Include="Views\Home\MartialArts.cshtml" />
+    <Content Include="Views\Home\Drama.cshtml" />
+    <Content Include="Views\Home\Tron.cshtml" />
+    <Content Include="Views\Home\Serenity.cshtml" />
+    <Content Include="Views\Home\RogueOneAStarWarsStory.cshtml" />
+    <Content Include="Views\Home\StarWarsANewHope.cshtml" />
+    <Content Include="Views\Home\SpaceOdyssey2001.cshtml" />
+    <Content Include="Views\Home\BladeRunner.cshtml" />
+    <Content Include="Views\Home\AlienCovenant.cshtml" />
+    <Content Include="Views\Home\CloseEncounters.cshtml" />
+    <Content Include="Views\Home\ISpitOnYourGrave.cshtml" />
+    <Content Include="Views\Home\Sinsiter.cshtml" />
+    <Content Include="Views\Home\Alien.cshtml" />
+    <Content Include="Views\Home\TheOmen.cshtml" />
+    <Content Include="Views\Home\TheInvitation.cshtml" />
+    <Content Include="Views\Home\JohnWickChapter2.cshtml" />
+    <Content Include="Views\Home\Avengers.cshtml" />
+    <Content Include="Views\Home\GuardiansoftheGalaxyVol2.cshtml" />
+    <Content Include="Views\Home\MadMaxFuryRoad.cshtml" />
+    <Content Include="Views\Home\CasinoRoyale2006.cshtml" />
+    <Content Include="Views\Home\FaceOff.cshtml" />
+    <Content Include="Views\Home\IpMan.cshtml" />
+    <Content Include="Views\Home\EntertheDragon.cshtml" />
+    <Content Include="Views\Home\Fearless.cshtml" />
+    <Content Include="Views\Home\KungFuHustle.cshtml" />
+    <Content Include="Views\Home\TheRaid.cshtml" />
+    <Content Include="Views\Home\ForrestGump.cshtml" />
+    <Content Include="Views\Home\TheShawShankRedemption.cshtml" />
+    <Content Include="Views\Home\ManchesterBytheSea.cshtml" />
+    <Content Include="Views\Home\SavingPrivateRyan.cshtml" />
+
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
