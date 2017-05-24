@@ -20,8 +20,5 @@ namespace _5_Stars_Reviews.Models
         ICollection<Actor> Actors;
 
         ICollection<Review> Reviews;
-
-        ICollection<Comment> Comments;
-
     }
 }
