@@ -17,8 +17,9 @@ namespace _5_Stars_Reviews.Models
 
         public virtual string Genre { get; set; }
 
-        ICollection<Actor> Actors;
+        public virtual int DirectorId { get; set; }
 
-        ICollection<Review> Reviews;
+        public virtual Director Director { get; set; }
+
     }
 }
