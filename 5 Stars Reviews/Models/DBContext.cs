@@ -6,7 +6,7 @@ using System.Web;
 
 namespace _5_Stars_Reviews.Models
 {
-    public class FilmContext : DbContext
+    public class DBContext : DbContext
     {
         // You can add custom code to this file. Changes will not be overwritten.
         // 
@@ -15,10 +15,18 @@ namespace _5_Stars_Reviews.Models
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
     
-        public FilmContext() : base("name=FilmContext")
+        public DBContext() : base("name=DBContext")
         {
         }
 
         public System.Data.Entity.DbSet<_5_Stars_Reviews.Models.Film> Films { get; set; }
+
+        public System.Data.Entity.DbSet<_5_Stars_Reviews.Models.Actor> Actors { get; set; }
+
+        public System.Data.Entity.DbSet<_5_Stars_Reviews.Models.Comment> Comments { get; set; }
+
+        public System.Data.Entity.DbSet<_5_Stars_Reviews.Models.Director> Directors { get; set; }
+
+        public System.Data.Entity.DbSet<_5_Stars_Reviews.Models.Review> Reviews { get; set; }
     }
 }

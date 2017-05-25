@@ -168,20 +168,22 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ActorController.cs" />
     <Compile Include="Controllers\CommentController.cs" />
+    <Compile Include="Controllers\DirectorController.cs" />
     <Compile Include="Controllers\FilmController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ReviewController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Actor.cs" />
     <Compile Include="Models\Comment.cs" />
-    <Compile Include="Models\CommentContext.cs" />
+    <Compile Include="Models\DBContext.cs" />
     <Compile Include="Models\Director.cs" />
     <Compile Include="Models\Film.cs" />
-    <Compile Include="Models\FilmContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Review.cs" />
@@ -286,11 +288,26 @@
     <Content Include="Views\Film\Details.cshtml" />
     <Content Include="Views\Film\Edit.cshtml" />
     <Content Include="Views\Film\Index.cshtml" />
+    <Content Include="Views\Actor\Create.cshtml" />
+    <Content Include="Views\Actor\Delete.cshtml" />
+    <Content Include="Views\Actor\Details.cshtml" />
+    <Content Include="Views\Actor\Edit.cshtml" />
+    <Content Include="Views\Actor\Index.cshtml" />
     <Content Include="Views\Comment\Create.cshtml" />
     <Content Include="Views\Comment\Delete.cshtml" />
     <Content Include="Views\Comment\Details.cshtml" />
     <Content Include="Views\Comment\Edit.cshtml" />
     <Content Include="Views\Comment\Index.cshtml" />
+    <Content Include="Views\Director\Create.cshtml" />
+    <Content Include="Views\Director\Delete.cshtml" />
+    <Content Include="Views\Director\Details.cshtml" />
+    <Content Include="Views\Director\Edit.cshtml" />
+    <Content Include="Views\Director\Index.cshtml" />
+    <Content Include="Views\Review\Create.cshtml" />
+    <Content Include="Views\Review\Delete.cshtml" />
+    <Content Include="Views\Review\Details.cshtml" />
+    <Content Include="Views\Review\Edit.cshtml" />
+    <Content Include="Views\Review\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

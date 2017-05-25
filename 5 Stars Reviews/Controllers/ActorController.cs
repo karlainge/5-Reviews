@@ -10,116 +10,107 @@ using _5_Stars_Reviews.Models;
 
 namespace _5_Stars_Reviews.Controllers
 {
-    public class CommentController : Controller
+    public class ActorController : Controller
     {
         private DBContext db = new DBContext();
 
-        // GET: Comment
+        // GET: Actor
         public ActionResult Index()
         {
-            var comments = db.Comments.Include(c => c.Actors).Include(c => c.Directors);
-            return View(comments.ToList());
+            return View(db.Actors.ToList());
         }
 
-        // GET: Comment/Details/5
+        // GET: Actor/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Comment comment = db.Comments.Find(id);
-            if (comment == null)
+            Actor actor = db.Actors.Find(id);
+            if (actor == null)
             {
                 return HttpNotFound();
             }
-            return View(comment);
+            return View(actor);
         }
 
-        // GET: Comment/Create
+        // GET: Actor/Create
         public ActionResult Create()
         {
-            ViewBag.ActorId = new SelectList(db.Actors, "ActorId", "ActorName");
-            ViewBag.DirectorId = new SelectList(db.Directors, "DirectorId", "DirectorName");
             return View();
         }
 
-        // POST: Comment/Create
+        // POST: Actor/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CommentId,CommentContent,ActorId,DirectorId")] Comment comment)
+        public ActionResult Create([Bind(Include = "ActorId,ActorName")] Actor actor)
         {
             if (ModelState.IsValid)
             {
-                db.Comments.Add(comment);
+                db.Actors.Add(actor);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ActorId = new SelectList(db.Actors, "ActorId", "ActorName", comment.ActorId);
-            ViewBag.DirectorId = new SelectList(db.Directors, "DirectorId", "DirectorName", comment.DirectorId);
-            return View(comment);
+            return View(actor);
         }
 
-        // GET: Comment/Edit/5
+        // GET: Actor/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Comment comment = db.Comments.Find(id);
-            if (comment == null)
+            Actor actor = db.Actors.Find(id);
+            if (actor == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.ActorId = new SelectList(db.Actors, "ActorId", "ActorName", comment.ActorId);
-            ViewBag.DirectorId = new SelectList(db.Directors, "DirectorId", "DirectorName", comment.DirectorId);
-            return View(comment);
+            return View(actor);
         }
 
-        // POST: Comment/Edit/5
+        // POST: Actor/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CommentId,CommentContent,ActorId,DirectorId")] Comment comment)
+        public ActionResult Edit([Bind(Include = "ActorId,ActorName")] Actor actor)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(comment).State = EntityState.Modified;
+                db.Entry(actor).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ActorId = new SelectList(db.Actors, "ActorId", "ActorName", comment.ActorId);
-            ViewBag.DirectorId = new SelectList(db.Directors, "DirectorId", "DirectorName", comment.DirectorId);
-            return View(comment);
+            return View(actor);
         }
 
-        // GET: Comment/Delete/5
+        // GET: Actor/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Comment comment = db.Comments.Find(id);
-            if (comment == null)
+            Actor actor = db.Actors.Find(id);
+            if (actor == null)
             {
                 return HttpNotFound();
             }
-            return View(comment);
+            return View(actor);
         }
 
-        // POST: Comment/Delete/5
+        // POST: Actor/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Comment comment = db.Comments.Find(id);
-            db.Comments.Remove(comment);
+            Actor actor = db.Actors.Find(id);
+            db.Actors.Remove(actor);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

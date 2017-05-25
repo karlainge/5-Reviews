@@ -12,7 +12,7 @@ namespace _5_Stars_Reviews.Controllers
 {
     public class FilmController : Controller
     {
-        private FilmContext db = new FilmContext();
+        private DBContext db = new DBContext();
 
         // GET: Film
         public ActionResult Index()

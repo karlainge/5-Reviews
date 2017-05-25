@@ -13,7 +13,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Comments)
+            @Html.DisplayNameFor(model => model.Actors.ActorName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Directors.DirectorName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CommentContent)
         </th>
         <th></th>
     </tr>
@@ -21,7 +27,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Comments)
+            @Html.DisplayFor(modelItem => item.Actors.ActorName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Directors.DirectorName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CommentContent)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.CommentId }) |
