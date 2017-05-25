@@ -111,8 +111,7 @@ namespace _5_Stars_Reviews.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            //ViewBag.Actors = new SelectList(db.Actors, "ActorId", "ActorName", film.ActorId);
-            //ViewBag.DirectorId = new SelectList(db.Directors, "DirectorId", "DirectorName", film.DirectorId);
+           
             return View(film);
         }
 
