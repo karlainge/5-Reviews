@@ -17,7 +17,8 @@ namespace _5_Stars_Reviews.Controllers
         // GET: Film
         public ActionResult Index()
         {
-            return View(db.Films.ToList());
+            var films = db.Films.Include(f => f.Director);
+            return View(films.ToList());
         }
 
         // GET: Film/Details/5
@@ -38,6 +39,8 @@ namespace _5_Stars_Reviews.Controllers
         // GET: Film/Create
         public ActionResult Create()
         {
+            ViewBag.Actors = new SelectList(db.Actors, "ActorId", "ActorName");
+            ViewBag.DirectorId = new SelectList(db.Directors, "DirectorId", "DirectorName");
             return View();
         }
 
@@ -46,15 +49,22 @@ namespace _5_Stars_Reviews.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "FilmId,FilmName,Description,ReleaseDate,Genre")] Film film)
+        [ValidateInput(false)]
+        public ActionResult Create([Bind(Include = "FilmId,FilmName,Description,ReleaseDate,Genre,DirectorId,ActorId")] Film film)
         {
             if (ModelState.IsValid)
             {
                 db.Films.Add(film);
+
+                var actorIds = Request.Unvalidated.Form["Actors"];
+                addActorsToFilm(film, actorIds);
+
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
+            ViewBag.Actors = new SelectList(db.Actors, "ActorId", "ActorName");
+            ViewBag.DirectorId = new SelectList(db.Directors, "DirectorId", "DirectorName", film.DirectorId);
             return View(film);
         }
 
@@ -65,11 +75,19 @@ namespace _5_Stars_Reviews.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             Film film = db.Films.Find(id);
+
+            var actorIds = film.Actors.Select(c => c.ActorId).ToArray();
+
             if (film == null)
+
             {
                 return HttpNotFound();
             }
+
+            ViewBag.Actors = new SelectList(db.Actors, "ActorId", "ActorName", actorIds);
+            ViewBag.DirectorId = new SelectList(db.Directors, "DirectorId", "DirectorName", film.DirectorId);
             return View(film);
         }
 
@@ -78,14 +96,23 @@ namespace _5_Stars_Reviews.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "FilmId,FilmName,Description,ReleaseDate,Genre")] Film film)
+        [ValidateInput(false)]
+        public ActionResult Edit([Bind(Include = "FilmId,FilmName,Description,ReleaseDate,Genre,DirectorId,ActorId")] Film film)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(film).State = EntityState.Modified;
+
+                DeleteActorsFromFilm(film);
+
+                var actorIds = Request.Unvalidated.Form["Actors"];
+                addActorsToFilm(film, actorIds);
+
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            //ViewBag.Actors = new SelectList(db.Actors, "ActorId", "ActorName", film.ActorId);
+            //ViewBag.DirectorId = new SelectList(db.Directors, "DirectorId", "DirectorName", film.DirectorId);
             return View(film);
         }
 
@@ -123,5 +150,32 @@ namespace _5_Stars_Reviews.Controllers
             }
             base.Dispose(disposing);
         }
+
+        private void addActorsToFilm(Film film, String actorsIds)
+        {
+            foreach(var ActorId in actorsIds.Split(','))
+            {
+                var intActorId = int.Parse(ActorId);
+                Actor actor = db.Actors.Where(ctor => ctor.ActorId == intActorId).First();
+                actor.Films.Add(film);
+                if(film.Actors != null)
+                {
+                    film.Actors.Add(actor);
+                }
+            }
+        }
+
+        private void DeleteActorsFromFilm(Film film)
+        {
+            db.Entry(film).Collection(p => p.Actors).Load();
+            var listActors = film.Actors.ToList();
+            foreach (var actor in listActors)
+            {
+                film.Actors.Remove(actor);
+            }
+        }
+
+
+
     }
 }

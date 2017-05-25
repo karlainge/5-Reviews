@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace _5_Stars_Reviews.Models
 {
@@ -21,11 +22,13 @@ namespace _5_Stars_Reviews.Models
 
         public System.Data.Entity.DbSet<_5_Stars_Reviews.Models.Film> Films { get; set; }
 
+        public System.Data.Entity.DbSet<_5_Stars_Reviews.Models.Director> Directors { get; set; }
+        [AllowHtml]
         public System.Data.Entity.DbSet<_5_Stars_Reviews.Models.Actor> Actors { get; set; }
 
-        public System.Data.Entity.DbSet<_5_Stars_Reviews.Models.Comment> Comments { get; set; }
+        public System.Data.Entity.DbSet<_5_Stars_Reviews.Models.ActorComment> ActorComments { get; set; }
 
-        public System.Data.Entity.DbSet<_5_Stars_Reviews.Models.Director> Directors { get; set; }
+        public System.Data.Entity.DbSet<_5_Stars_Reviews.Models.DirectorComment> DirectorComments { get; set; }
 
         public System.Data.Entity.DbSet<_5_Stars_Reviews.Models.Review> Reviews { get; set; }
     }

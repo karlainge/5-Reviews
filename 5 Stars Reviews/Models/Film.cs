@@ -16,8 +16,13 @@ namespace _5_Stars_Reviews.Models
         public virtual DateTime ReleaseDate { get; set; }
 
         public virtual string Genre { get; set; }
-         
-        public virtual ICollection<Director> Directors { get; set; }
+
+
+        public virtual int DirectorId { get; set; }
+
+        public virtual Director Director { get; set; }
+
+        public virtual int ActorId { get; set; }
 
         public virtual ICollection<Actor> Actors { get; set; }
 

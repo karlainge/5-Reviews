@@ -13,6 +13,14 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
+            @Html.DisplayNameFor(model => model.Director.DirectorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Director.DirectorName)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.FilmName)
         </dt>
 
@@ -42,6 +50,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.Genre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Actors)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actors)
         </dd>
 
     </dl>

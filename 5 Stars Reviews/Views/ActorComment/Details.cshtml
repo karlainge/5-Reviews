@@ -1,0 +1,35 @@
+﻿@model _5_Stars_Reviews.Models.ActorComment
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ActorComment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Actor.ActorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actor.ActorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AComment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AComment)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ACommentId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

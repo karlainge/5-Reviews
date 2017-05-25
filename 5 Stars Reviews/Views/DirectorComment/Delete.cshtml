@@ -1,4 +1,4 @@
-﻿@model _5_Stars_Reviews.Models.Comment
+﻿@model _5_Stars_Reviews.Models.DirectorComment
 
 @{
     ViewBag.Title = "Delete";
@@ -9,31 +9,23 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Comment</h4>
+    <h4>DirectorComment</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Actors.ActorName)
+            @Html.DisplayNameFor(model => model.Director.DirectorName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Actors.ActorName)
+            @Html.DisplayFor(model => model.Director.DirectorName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Directors.DirectorName)
+            @Html.DisplayNameFor(model => model.DComment)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Directors.DirectorName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CommentContent)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CommentContent)
+            @Html.DisplayFor(model => model.DComment)
         </dd>
 
     </dl>
